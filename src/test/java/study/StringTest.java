@@ -9,6 +9,7 @@ import static org.assertj.core.api.Assertions.*;
 
 class StringTest {
     @Test
+    @DisplayName("replace 작동 확인")
     void replace() {
         String actual = "abc".replace("b", "d");
         assertThat(actual).isEqualTo("adc");
@@ -59,6 +60,7 @@ class StringTest {
     }
 
     @Test
+    @DisplayName("예외 처리 테스트")
     void exceptions() {
         assertThatIllegalArgumentException()
                 .isThrownBy(() -> {
